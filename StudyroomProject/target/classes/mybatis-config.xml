@@ -5,5 +5,8 @@
 	<typeAliases> 
 		<typeAlias type="com.icia.study.dto.MemberDTO" alias="mdto" />
 		<typeAlias type="com.icia.study.dto.BoardDTO" alias="bdto" />
+		<typeAlias type="com.icia.study.dto.CommentDTO" alias="cdto" />
+		<typeAlias type="com.icia.study.dto.SroomDTO" alias="sdto" />
+		<typeAlias type="com.icia.study.dto.ReservationDTO" alias="rdto" />
 	</typeAliases>
 </configuration>

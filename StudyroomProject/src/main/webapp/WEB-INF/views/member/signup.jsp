@@ -51,7 +51,7 @@
 			const checkResult = document.getElementById('id-dup-check');
 			if(checkResult.innerHTML == '이미 사용중인 아이디입니다!'){
 				alert('아이디를 확인해주세요.');
-				history.back();
+				return false;
 			}else{
 				alert('회원가입 되었습니다.');
 			}
@@ -59,7 +59,7 @@
 	</script>
 </head>
 <body>
-<form action = "signup" method="post">
+<form action = "signup" method="post" onsubmit="return idcheck()">
 	<div id="divm">
 		<div class="mb-3">
   			<label for="exampleFormControlInput1" class="form-label">ID</label>
@@ -76,7 +76,7 @@
 		</div>
 
 
-		<button type="submit" class="btn btn-outline-dark" onclick="idcheck()">회원가입</button>
+		<button type="submit" class="btn btn-outline-dark">회원가입</button>
 		<button type="button" class="btn btn-dark" onclick="javascript:history.back();">취소</button>
 
 	</div>

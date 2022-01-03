@@ -98,3 +98,21 @@ review.jsp에 글쓰기 버튼 생성
 게시글 삭제 기능 추가(본인과 관리자만 삭제 가능)
 게시글 수정 기능 추가(본인이 쓴 글만 수정 가능)
 게시글 검색 기능 추가
+게시글에 댓글 기능을 위한 Comment클래스 추가(Controller, Service, Repository, mapper)
+댓글기능은 ajax 활용
+$.ajax({
+			type: 'post',
+			url: '/comment/save',
+			data:{'m_id': commentWriter, 'c_contents' : commentContents, 'b_number' :boardNumber},
+			dataType: 'json',
+			success: function(result){
+			}
+			})
+스터디룸 사진들을 볼 수 있는 sroom.jsp 생성후 경로설정
+예약을 위한 Reservation 클래스 생성
+스터디룸의 이름, 예약 날짜, 예약 시간 과 중복 확인 후 중복이 없으면 'ok' 출력, 아니면 'no' 출력
+form 태그에 onsubmit 을 사용하여 로그인 및 예약기능을 편하게 하도록 추가
+예약 현황 확인 jsp 생성
+날짜와 스터디룸 이름을 선택 후 그와 일치하는 예약 리스트들 출력.
+관리자만 열 수 있는 예약리스트 list.jsp 생성
+list.jsp에서는 예약된 리스트들과 취소할 수 있는 버튼이 있음.
